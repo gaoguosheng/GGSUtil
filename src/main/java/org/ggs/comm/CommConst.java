@@ -31,15 +31,38 @@ public class CommConst {
 	/***
 	 * JDBC
 	 * */
-	public  static String JDBC_DRIVER;
+    /**
+     * JDBC驱动
+     * */
+ 	public  static String JDBC_DRIVER;
+    /**
+     * JDBC连接串
+     * */
 	public  static String JDBC_URL ;
+    /**
+     * 用户名
+     * */
 	public  static String JDBC_USER;
+    /**
+     * 密码
+     * */
 	public  static String JDBC_PASSWORD;
+    /**
+     * 最小连接数
+     * */
 	public  static int JDBC_MinPoolSize=5;
+    /**
+     * 最大连接数
+     * */
+    public  static int JDBC_MaxPoolSize=20;
+    /**
+     * 用完连接一次性创建的连接数
+     * */
 	public  static int JDBC_AcquireIncrement=5;
-	public  static int JDBC_MaxPoolSize=20;
+
 	
 	static{
+        //读取配置
 		Properties pro = new Properties();
 		try {
 			pro.load(CommConst.class.getResourceAsStream(CommConst.CFG_PATH));
@@ -57,6 +80,7 @@ public class CommConst {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+        //扫描WEB包
 		ScanPackage.getPackages(CommConst.ACTION_PACKAGE,Action.class);
 	}
 }

@@ -36,7 +36,7 @@ public class JDBCUtil {
 		try {
 			cpds.setDriverClass(CommConst.JDBC_DRIVER);
 		} catch (PropertyVetoException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		cpds.setJdbcUrl(CommConst.JDBC_URL);

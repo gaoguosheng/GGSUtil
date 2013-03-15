@@ -69,10 +69,5 @@ public class ScanPackage {
 			}			
 		}
 	}	
-	public static void main(String[] args) {		
-		String url="http://localhost:8080/Test/TestAction2!save.action";
-		ActionBean actionBean=new ScanPackage().getActionBean(url);
-		System.out.println(CommConst.actionList);
-		System.out.println(actionBean.getName()+":"+actionBean.getPkg()+":"+actionBean.getMethod());		
-	}
+
 }

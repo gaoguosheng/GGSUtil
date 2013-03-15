@@ -17,7 +17,7 @@ import org.ggs.orm.annotation.NotColumn;
 import org.ggs.orm.annotation.PK;
 import org.ggs.orm.annotation.PKType;
 import org.ggs.orm.annotation.Table;
-import org.ggs.orm.bean.Locate;
+
 
 
 public class ORMUtil extends JDBCUtil {
@@ -262,26 +262,5 @@ public class ORMUtil extends JDBCUtil {
 		return result;
 	}
 	
-	public static void main(String[] args) {
-		ORMUtil ormUtil = new ORMUtil();
-		Locate locate = new Locate();
-		locate.setDatetime(new Date(System.currentTimeMillis()));
-		locate.setLat("26.019341");
-		locate.setLon("119.336801");
-		locate.setMobile("18959189975");
-		locate.setSpeed(141.03);
-		locate.setRid(108);		
-		ormUtil.save(locate);
-		//dbUtil.save(locate);
-		//save(locate);
-		//update(locate);
-		/*
-		Locate l = (Locate) get(Locate.class,107);
-		for(String field:getFields(l)){
-			System.out.println(field+"："+getFieldValue(l, field));
-		}
-		*/
-		//del(locate);
-		
-	}
+
 }
