@@ -17,12 +17,9 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-import javax.sql.DataSource;
-
-import org.ggs.comm.CommConst;
+import org.ggs.comm.GGS;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import com.mchange.v2.c3p0.DataSources;
 
 /**
  * 
@@ -34,18 +31,18 @@ public class JDBCUtil {
 	
 	public JDBCUtil() {
 		try {
-			cpds.setDriverClass(CommConst.JDBC_DRIVER);
+			cpds.setDriverClass(GGS.JDBC_DRIVER);
 		} catch (PropertyVetoException e) {
 			
 			e.printStackTrace();
 		}
-		cpds.setJdbcUrl(CommConst.JDBC_URL);
-		cpds.setUser(CommConst.JDBC_USER);
-		cpds.setPassword(CommConst.JDBC_PASSWORD);
+		cpds.setJdbcUrl(GGS.JDBC_URL);
+		cpds.setUser(GGS.JDBC_USER);
+		cpds.setPassword(GGS.JDBC_PASSWORD);
 		// 下面的设置是可选的，c3p0可以在默认条件下工作，也可以设置其他条件
-		cpds.setMinPoolSize(CommConst.JDBC_MinPoolSize);
-		cpds.setAcquireIncrement(CommConst.JDBC_AcquireIncrement);
-		cpds.setMaxPoolSize(CommConst.JDBC_MaxPoolSize);
+		cpds.setMinPoolSize(GGS.JDBC_MinPoolSize);
+		cpds.setAcquireIncrement(GGS.JDBC_AcquireIncrement);
+		cpds.setMaxPoolSize(GGS.JDBC_MaxPoolSize);
 	}
 	
 	protected Connection getConn() {

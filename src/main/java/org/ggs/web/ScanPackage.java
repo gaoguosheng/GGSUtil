@@ -1,12 +1,8 @@
 package org.ggs.web;
 
 import java.io.File;
-import java.io.ObjectInputStream.GetField;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.ggs.comm.CommConst;
-import org.ggs.web.annotation.Action;
+import org.ggs.comm.GGS;
 import org.ggs.web.bean.ActionBean;
 
 /***
@@ -14,7 +10,7 @@ import org.ggs.web.bean.ActionBean;
  * */
 public class ScanPackage {
 	
-
+                               /*
 	public static  ActionBean getActionBean(String url){
 		ActionBean actionBean = new ActionBean();
 		url=url.substring(url.lastIndexOf("/") + 1, url.length());
@@ -24,7 +20,7 @@ public class ScanPackage {
 		actionBean.setName(actionName);
 		actionBean.setMethod(methodName);
 		String pkg="";
-		for(String s:CommConst.actionList){
+		for(String s: GGS.actionList){
 			if(s.endsWith(actionName)){
 				pkg=s;
 				break;
@@ -35,7 +31,7 @@ public class ScanPackage {
 	}	
 	public static  void getPackages(String pkgName,Class annotationClass){				
 		String path  ="/"+pkgName.replaceAll("\\.", "/");		
-		scanPackage(CommConst.class.getResource(path).getPath(),annotationClass);		
+		scanPackage(GGS.class.getResource(path).getPath(),annotationClass);
 	}	
 	private static  void scanPackage(String path,Class annotationClass){		
 		File dir = new File(path);
@@ -57,17 +53,17 @@ public class ScanPackage {
 				if(annotationClass!=null){
 					try {
 						if(Class.forName(pkg).getAnnotation(annotationClass)!=null){
-							CommConst.actionList.add(pkg);	
+							GGS.actionList.add(pkg);
 						}
 					} catch (ClassNotFoundException e) {
 						e.printStackTrace();
 					}	
 				}else{
-					CommConst.actionList.add(pkg);	
+					GGS.actionList.add(pkg);
 				}
 							
 			}			
 		}
 	}	
-
+                                           */
 }

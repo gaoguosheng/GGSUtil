@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.fileupload.DiskFileUpload;
 import org.apache.commons.fileupload.FileItem;
-import org.ggs.comm.CommConst;
+import org.ggs.comm.GGS;
 import org.ggs.web.bean.FileBean;
 import org.ggs.web.bean.UploadBean;
 
@@ -126,7 +126,7 @@ public class BaseAction {
 						tmpFileName = getRndFileName(fi.getName());
 						// 将文件保存到服务器.
 						try {
-							String realpath = this.servletContext	.getRealPath(CommConst.UPLOAD_PATH);
+							String realpath = this.servletContext	.getRealPath(GGS.UPLOAD_PATH);
 							File dir = new File(realpath);
 							if(!dir.exists()){
 								//如果目录不存在，直接创建目录
@@ -190,7 +190,7 @@ public class BaseAction {
 	 * @param filename 下载文件名
 	 * */
 	public void download(String filename){
-		download(CommConst.UPLOAD_PATH, filename);
+		download(GGS.UPLOAD_PATH, filename);
 	}
 	
 	/**

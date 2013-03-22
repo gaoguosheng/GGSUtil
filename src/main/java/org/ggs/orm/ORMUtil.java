@@ -261,6 +261,8 @@ public class ORMUtil extends JDBCUtil {
 		String result = s.substring(1,s.length()-1);
 		return result;
 	}
+
+
 	
 
 }

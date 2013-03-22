@@ -1,14 +1,12 @@
 package org.ggs.comm;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
-
 import org.ggs.web.ScanPackage;
 import org.ggs.web.annotation.Action;
 
+import java.util.*;
 
-public class CommConst {
+
+public class GGS {
 	/**
 	 * 系统配置文件
 	 * */
@@ -24,10 +22,12 @@ public class CommConst {
 	 * 上传路径
 	 * */
 	public static String UPLOAD_PATH="/upload";
-	/**
-	 * 扫描Action元注释集合
-	 * */
-	public static List<String> actionList=new ArrayList<String>();
+
+    /**
+     * 编码
+     * */
+    public static String ENCODING="UTF-8";
+
 	/***
 	 * JDBC
 	 * */
@@ -65,9 +65,10 @@ public class CommConst {
         //读取配置
 		Properties pro = new Properties();
 		try {
-			pro.load(CommConst.class.getResourceAsStream(CommConst.CFG_PATH));
+			pro.load(GGS.class.getResourceAsStream(GGS.CFG_PATH));
 			ACTION_PACKAGE= pro.getProperty("ACTION_PACKAGE");
-			UPLOAD_PATH=pro.getProperty("UPLOAD_PATH");			
+			UPLOAD_PATH=pro.getProperty("UPLOAD_PATH");
+            ENCODING=pro.getProperty("ENCODING");
 			
 			JDBC_DRIVER=pro.getProperty("JDBC_DRIVER");
 			JDBC_URL=pro.getProperty("JDBC_URL");
@@ -80,7 +81,8 @@ public class CommConst {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-        //扫描WEB包
-		ScanPackage.getPackages(CommConst.ACTION_PACKAGE,Action.class);
+
 	}
+
+
 }
