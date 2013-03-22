@@ -1,5 +1,11 @@
 package org.ggs.orm;
 
+import org.ggs.jdbc.JDBCUtil;
+import org.ggs.orm.annotation.NotColumn;
+import org.ggs.orm.annotation.PK;
+import org.ggs.orm.annotation.PKType;
+import org.ggs.orm.annotation.Table;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.sql.Connection;
@@ -11,12 +17,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-
-import org.ggs.jdbc.JDBCUtil;
-import org.ggs.orm.annotation.NotColumn;
-import org.ggs.orm.annotation.PK;
-import org.ggs.orm.annotation.PKType;
-import org.ggs.orm.annotation.Table;
 
 
 

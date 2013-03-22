@@ -1,9 +1,6 @@
 package org.ggs.comm;
 
-import org.ggs.web.ScanPackage;
-import org.ggs.web.annotation.Action;
-
-import java.util.*;
+import java.util.Properties;
 
 
 public class GGS {

@@ -1,16 +1,10 @@
 package org.ggs.util;
 
-import org.ggs.bean.BaseBean;
-import org.ggs.bean.BaseBean2;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.Map;
 /**
  * bean工具，如两个bean互拷，map与bean互拷等
  * @author高国生

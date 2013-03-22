@@ -1,5 +1,8 @@
 package org.ggs.util;
 
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.security.Security;
@@ -9,10 +12,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.StringTokenizer;
-
-import javax.crypto.Cipher;
-import javax.crypto.KeyGenerator;
-import javax.crypto.SecretKey;
 
 /**
  * 文件描述: 此类中封装一些常用的字符串操作（和业务无关）

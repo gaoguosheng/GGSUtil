@@ -1,10 +1,9 @@
 package org.ggs.web;
 
+import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import javax.servlet.http.HttpServletRequest;
 
 public class Request2Bean {
 

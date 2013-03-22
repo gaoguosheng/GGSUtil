@@ -1,10 +1,5 @@
 package org.ggs.web;
 
-import java.io.File;
-
-import org.ggs.comm.GGS;
-import org.ggs.web.bean.ActionBean;
-
 /***
  * 扫描包
  * */
